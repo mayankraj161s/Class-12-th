@@ -1,5 +1,8 @@
 # WAP to remove all words that contain character entered by user in the file and then write all the content in another file.
-f = open("myfile1.txt", "r")
+try:
+    f = open("myfile1.txt", "r")
+except:
+    print("Create "myfile1.txt".)
 chr = input("Enter a character to remove words containing it: ")
 lines = f.readlines()
 for a in lines:
